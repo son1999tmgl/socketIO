@@ -5,60 +5,31 @@ body{
     width: 600px;
     margin: auto;
 }
-#txtUsername {
-    background-color: transparent;
-    border: solid 1px black;
-}
-#chatForm {
+
+.wrapper-rooms {
     display: flex;
-    
+    flex-wrap: nowrap;
+    margin: 30px -15px;
+    padding: 15px;
 }
 
-#left, #right {
-    min-height: 300px;
+.wrapper-rooms > div {
+    margin:0 15px;
 }
 
-#left {
-    width: 30%;
-    background-color:antiquewhite;
+#wrapperListRoom {
+    min-height: 20px;
+    background-color: aliceblue;
+    flex: 3;
 }
-#right {
-    width: 70%;
+#roomCurent {
+    padding: 5px;
     background-color: white;
-}
-
-#boxTitle {
-    border: solid 1px black;
-    padding: 5px;
-    text-align: center;
-    font-weight: bold;
-}
-
-#boxContent {
-    border: 1px solid black;
-    padding: 5px;
-    border-top: none;
-    text-align: center;
-}
-
-#sayHi {
-    background-color: #c6b5b5;
-    position: relative;
-    text-align: center;
-    padding: 5px;
-}
-#btnLogout {
-    position: absolute;
-    right: 5px;
-}
-#listMessages {
-    height: 500px;
-    background-color: white;
-}
-#wrapperinputMessage {
-    display: flex;
-    margin-top: 20px;
-}
-#txtMessage {
+    border-radius: 2px;
     flex: 1;
+    min-height: 10px;
+}
+
+.wrapper-sendMessage {
+    
 }

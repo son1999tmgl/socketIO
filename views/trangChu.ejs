@@ -13,35 +13,33 @@
 </head>
 <body>
     <div id="wrapper">
-        <div id="loginForm">
-            <h3>What's your name?</h3>
-            <input type="text" id="txtUsername">
-            <input type="button" value="Register" id="btnRegister">
+        <div class="wrapper-create-room">
+            <input type="text" id="textCreateRoom">
+            <button id="btnCreateRoom">Tao room</button>
         </div>
-        <div id="chatForm">
-            <div id="left">
-                <div id="boxTitle">
-                    User Online
-                </div>
-                <div id="boxContent">
-                    
-                </div>
-            </div>
-            <div id="right">
-                <div id="sayHi">
-                     <span>Hello <span id="userName"></span></span>
-                    <input type="button" value="Logout" id="btnLogout">
-                </div>
-                <div id="listMessages">
-
-                </div>
-                <div id="wrapperinputMessage">
-                    <input type="text" id="txtMessage">
-                    <input type="button" value="Send" id="btnSendMessage">
-                </div>
+        <div class="wrapper-rooms">
+            <div>Danh sách room: </div>
+            <div id="wrapperListRoom">
 
             </div>
+
+            <div id="roomCurent">
+                <span>Room: </span> <span id="roomCurrent"></span>
+            </div>
         </div>
+
+        <div class="wrapper-messages">
+            <div id="listMessages">
+
+            </div>
+            <div class="wrapper-sendMessage">
+                <input type="text" id="textSendMessage">
+                <input type="button" value="Send" id="btnSendMessage">
+            </div>
+        </div>
+
+
+
     </div>
 </body>
 </html>
