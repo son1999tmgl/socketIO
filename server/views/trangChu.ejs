@@ -11,7 +11,17 @@
     var socket = io("http://localhost:3000");
     $(document).ready(() => {
         $('#mrA').click(() => {
-            socket.emit("Client-send-data", "Hello")
+            socket.emit("Client-send-data", "client send data")
+           
+        })
+        socket.on("Server-send-data", (data) => {
+            document.getElementById("mrA").innerText += data
+        })
+        socket.on("Server-send-data-me", (data) => {
+            document.getElementById("mrA").innerText += data
+        })
+        socket.on("Server-send-data-other", (data) => {
+            document.getElementById("mrA").innerText += data
         })
     })
 </script>

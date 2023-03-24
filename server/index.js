@@ -17,7 +17,14 @@ io.on('connection', (socket) => {
         console.log(socket.id + " ngat ket noi")
     })
     socket.on("Client-send-data", (data) => {
-        console.log("data:  ", data);
+        // gui lại tat ca client(ke ca chinh no)
+        io.sockets.emit("Server-send-data", data + "123")
+        
+        // Gửi lại cho chinh socket do
+        socket.emit("Server-send-data-me", data+ "234")
+
+        //Gửi cho tất cả(trừ chính nó)
+        socket.broadcast.emit("Server-send-data-other", data + "456")
     })
 })
 
