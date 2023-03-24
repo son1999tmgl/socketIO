@@ -17,4 +17,14 @@ $(document).ready(function(){
         $("#roomCurrent").html(name)
     })
 
+    $("#btnSendMessage").click(() => {
+        socket.emit("client-send-message-room", $("#textSendMessage").val())
+    })
+
+    socket.on("server-send-message-room", (message) => {
+        console.log("message: ", message);
+        $("#textSendMessage").val("")
+        $("#listMessages").append("<div>"+message+"</div>")
+    })
+
 });

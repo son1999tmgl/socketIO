@@ -16,6 +16,9 @@ io.on("connection", (socket) => {
         io.sockets.emit("server-send-list-room", Array.from(io.sockets.adapter.rooms.keys()))
         socket.emit("server-send-room-curren", nameRoom)
     })
+    socket.on("client-send-message-room", (message) => {
+        io.to(socket.room).emit("server-send-message-room", message)
+    })
 })
 
 app.get("/", (req, res) => {
