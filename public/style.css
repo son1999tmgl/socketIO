@@ -1,0 +1,64 @@
+body{
+    background-color: #9aa9b1;
+}
+#wrapper {
+    width: 600px;
+    margin: auto;
+}
+#txtUsername {
+    background-color: transparent;
+    border: solid 1px black;
+}
+#chatForm {
+    display: flex;
+    
+}
+
+#left, #right {
+    min-height: 300px;
+}
+
+#left {
+    width: 30%;
+    background-color:antiquewhite;
+}
+#right {
+    width: 70%;
+    background-color: white;
+}
+
+#boxTitle {
+    border: solid 1px black;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#boxContent {
+    border: 1px solid black;
+    padding: 5px;
+    border-top: none;
+    text-align: center;
+}
+
+#sayHi {
+    background-color: #c6b5b5;
+    position: relative;
+    text-align: center;
+    padding: 5px;
+}
+#btnLogout {
+    position: absolute;
+    right: 5px;
+}
+#listMessages {
+    height: 500px;
+    background-color: white;
+}
+#wrapperinputMessage {
+    display: flex;
+    margin-top: 20px;
+}
+#txtMessage {
+    flex: 1;
+}
