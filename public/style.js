@@ -1,4 +1,4 @@
-var socket = io("http://localhost:3000")
+var socket = io("https://sonngong.herokuapp.com/")
 $(document).ready(function(){
     $("#btnCreateRoom").click(() => {
         socket.emit("client-create-room", $("#textCreateRoom").val())
